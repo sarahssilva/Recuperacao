@@ -6,20 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sintexe PHP</title>
 </head>
-<body>Exercício 1: Calculadora Simples
-Criar um script que receba dois números e uma operação (soma, subtração, multiplicação, divisão) e exiba o resultado da operação.
-Crie três variáveis: $numero1, $numero2, e $operacao.
-Atribua valores aos dois números e defina a operação como uma string ("soma", "subtração", "multiplicação", "divisão").
-Use uma estrutura condicional if-else para realizar a operação escolhida e exibir o resultado.
-
     <h2>Exercício 1: Calculadora Simples</h2>
     <?php
         $numero1 = 6;
         $numero2 = 28;
         $operacao = soma:
-        if ($operação = $numero1 + $numero2);{
-            echo "A soma é $operacao";
-        }else if ($operação = $numero1 + $numero2)
+        $resultado = 0; 
+
+        if ($operacao == "soma") {
+            $resultado = $numero1 + $numero2;
+        } 
+        elseif ($operacao == "subtracao") {
+            $resultado = $numero1 - $numero2;
+        } 
+        elseif ($operacao == "multiplicacao") {
+            $resultado = $numero1 * $numero2;
+        } 
+        elseif ($operacao == "divisao") {
+            if ($numero2 != 0) { 
+                $resultado = $numero1 / $numero2;
+            } else {
+                echo "<p>Não é possível dividir por zero</p>";
+            }
+        } else {
+            echo "<p>Operação inválida. Use 'soma', 'subtracao', 'multiplicacao' ou 'divisao'.</p>";
+        }
+
+        echo "O resultado é $resultado";
+        ?>
+
 
     <h2>Exercício 2: Calculadora de Idade</h2>
     <?php
@@ -76,6 +91,102 @@ Use uma estrutura condicional if-else para realizar a operação escolhida e exi
         }else if( $numero == 0){
             echo "Zero";
         }
+    ?>
+
+    <h2>Exercício 7: Classificação de Nota Escolar</h2>
+    <?php
+    $nota  = 97;
+
+    if ($nota <= 60){
+        echo "Nota F";
+    }else if ($nota >= 60 || $nota <= 70;){
+        echo "Nota D";
+    }else if ($nota >=70 || $nota <= 79){
+        echo "Nota C";
+    }else if ($nota >= 80 || $nota <= 89){
+        echo "Nota B";
+    }else if ($nota >=90 || $nota <= 100){
+        echo "Nota A";
+    }
+    ?>
+
+    <h2>Exercício 8: Verificação de Ano Bissexto</h2>
+    <?php
+    $ano = 2019;
+
+    if($ano % 4 == 0 && $ano % 100 != 0){
+        echo "Correspondente";
+    }else if ($ano % 400 == 0){
+        echo "Correspondente";
+    }else{
+        echo "Não correspondente";
+    }
+    ?>
+
+    <h2>Exercício 9: Verificação de Tamanho de Senha</h2>
+    <?php
+    $senha(8) = rapariga;
+    $caracteres = 8;
+
+    if $senha == $caracteres) {
+        echo "A senha '$senha' atende ao comprimento mínimo de $caracteres caracteres.";
+    } else {
+        echo "A senha '$senha' não atende ao comprimento mínimo de $caracteres caracteres.";
+    }
+    ?>
+
+    <h2>Exercício 10: Contagem com while</h2>
+    <?php
+    $contador = 1;
+
+    while ($contador <= 10) {
+        echo $contador . "<br>"; 
+        $contador++; 
+    }
+    ?>
+
+
+    <h2>Exercício 11: Soma de Números com while</h2>
+    <?php
+    $soma = 0;
+    $numero = 1;
+
+    while ($numero <= 100) {
+        $soma += $numero; 
+        $numero++; 
+    }
+    echo "A soma dos números de 1 a 100 é: $soma";
+    ?>
+
+    <h2>Exercício 12: Tabuada com for</h2>
+    <?php
+    $numero = 5;
+
+    for ($i = 1; $i <= 10; $i++) {
+        $resultado = $numero * $i; 
+        echo "$numero x $i = $resultado<br>";} 
+    ?>
+
+    <h2>Exercício 13: Fatorial com for</h2>
+    <?php
+    $numero = 5;
+
+    $fatorial = 1;
+
+    for ($i = 1; $i <= $numero; $i++) {
+        $fatorial *= $i; }
+
+    echo "O fatorial de $numero é: $fatorial";
+    ?>
+
+    <h2>Exercício 14: Números Pares com for</h2>
+    <?php
+    $numero = 1;
+    for ($numero = 1; $numero <= 50; $numero++) {
+        if ($numero % 2 == 0) {
+            echo $numero . "<br>"; 
+        }
+    }
     ?>
  
 </body>
