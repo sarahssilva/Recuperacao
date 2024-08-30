@@ -10,7 +10,7 @@
     <?php
         $numero1 = 6;
         $numero2 = 28;
-        $operacao = soma:
+        $operacao = "soma";
         $resultado = 0; 
 
         if ($operacao == "soma") {
@@ -99,7 +99,7 @@
 
     if ($nota <= 60){
         echo "Nota F";
-    }else if ($nota >= 60 || $nota <= 70;){
+    }else if ($nota >= 60 || $nota <= 70){
         echo "Nota D";
     }else if ($nota >=70 || $nota <= 79){
         echo "Nota C";
@@ -125,10 +125,10 @@
 
     <h2>Exercício 9: Verificação de Tamanho de Senha</h2>
     <?php
-    $senha(8) = rapariga;
+    $senha = "rapariga";
     $caracteres = 8;
 
-    if $senha == $caracteres) {
+    if (strlen($senha) == $caracteres) {
         echo "A senha '$senha' atende ao comprimento mínimo de $caracteres caracteres.";
     } else {
         echo "A senha '$senha' não atende ao comprimento mínimo de $caracteres caracteres.";
